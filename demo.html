@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div class="subject" id="view_subject_1">题目1</div>
+			<div class="subject" id="view_subject_2">题目2</div>
+			<div class="subject" id="view_subject_3">题目3</div>
+			<div class="subject" id="view_subject_4">题目4</div>
+			<div class="subject" id="view_subject_5">题目5</div>
+			<div class="subject" id="view_subject_6">题目6</div>
+			<div class="subject" id="view_subject_7">题目7</div>
+			<div class="subject" id="view_subject_8">题目8</div>
+			<div class="subject" id="view_subject_9">题目9</div>
+		</div>
+	</div>
+	<ul class="progressblock-bar" id="view_progressblock_bar">
+		<a href="#view_subject_1"><li class="progressblock-item">1</li></a>
+		<a href="#view_subject_2"><li class="progressblock-item">2</li></a>
+		<a href="#view_subject_3"><li class="progressblock-item">3</li></a>
+		<a href="#view_subject_4"><li class="progressblock-item">4</li></a>
+		<a href="#view_subject_5"><li class="progressblock-item">5</li></a>
+		<a href="#view_subject_6"><li class="progressblock-item">6</li></a>
+		<a href="#view_subject_7"><li class="progressblock-item">7</li></a>
+		<a href="#view_subject_8"><li class="progressblock-item">8</li></a>
+		<a href="#view_subject_9"><li class="progressblock-item">9</li></a>
+		<a href="#view_subject_6"><li class="progressblock-item">6</li></a>
+		<a href="#view_subject_7"><li class="progressblock-item">7</li></a>
+		<a href="#view_subject_8"><li class="progressblock-item">8</li></a>
+		<a href="#view_subject_9"><li class="progressblock-item">9</li></a>
+		<a href="#view_subject_6"><li class="progressblock-item">6</li></a>
+		<a href="#view_subject_7"><li class="progressblock-item">7</li></a>
+		<a href="#view_subject_8"><li class="progressblock-item">8</li></a>
+		<a href="#view_subject_9"><li class="progressblock-item">9</li></a>
+		<a href="#view_subject_6"><li class="progressblock-item">6</li></a>
+		<a href="#view_subject_7"><li class="progressblock-item">7</li></a>
+		<a href="#view_subject_8"><li class="progressblock-item">8</li></a>
+		<a href="#view_subject_9"><li class="progressblock-item">9</li></a>
+	</ul>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			var width = $(window).width();
+			var height = $(window).height();
+			var items = $('.progressblock-item');
+			if (height - 200 > items.length * 104) {
+				$('.progressblock-bar').height(items.length * 102 + 2);
+			} else {
+				$('.progressblock-bar').height(height - 200);
+				var price = (height - 200 - 2)/items.length -2;
+				$('.progressblock-item').height(price);
+			}
+			
+		});
+	</script>
+</body>
+</html>
